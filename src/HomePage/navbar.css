@@ -1,0 +1,60 @@
+/* NAVBAR */
+
+.icon
+{
+    padding-top: 20px;
+}
+
+/* .navbar-link:hover
+{
+    font-size: 0.8rem;
+    color: #F49C46;
+    font-weight: bold;
+   
+} */
+
+.navbar-Dashboard:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Courses:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Users:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Settings:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Reports:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Discussions:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+.navbar-Announcements:hover
+{
+    color: #F49C46;
+    font-weight: bold;
+}
+
+
+
+

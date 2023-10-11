@@ -5,9 +5,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header-course {
+  text-align: center;
+  color: #253F75;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 40px;
+}
+
+.background-courses
+{
+  background-color: #fcfcfc;
+  height: 100vh;
+}
+
+.p-color
+{
+  color: #E39055;
+}
+
+.card
+{
+  margin-top: 70px;
+  /* border:'1px solid #ffff' */
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.flex-container .card {
+  margin-right: 10px; /* Adjust the margin value as needed */
 }
