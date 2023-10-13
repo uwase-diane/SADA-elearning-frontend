@@ -45,7 +45,7 @@ const AllCourse = () => {
             {courses.map(course => (
               <div className='col-md-4' key={course.id}>
                 <CCard style={{ width: '18rem' }}>
-                  <CCardImage orientation="top"src={course.image} />
+                  <CCardImage orientation="top"src="https://res.cloudinary.com/auca/image/upload/v1679073154/Rectangle_1863s_ep6c0m.png"/>
                   <CCardBody>
                   <Link style={{textDecoration:'none',color:'#253F75', fontWeight:'bold',fontSize:'16px',textTransform: 'uppercase'}} to={`/course/${course.id}`}>{course.course_name}</Link>
                     <CCardText style={{fontSize:'13px'}}>
