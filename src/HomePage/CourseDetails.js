@@ -3,7 +3,12 @@ import axios from 'axios';
 import { Link, useParams } from 'react-router-dom'; // Import Link and useParams
 import NavbarDashboard from './Navbar';
 import Card from 'react-bootstrap/Card';
-import { CCard, CCardImage, CCardBody, CCardTitle, CCardText, CButton } from '@coreui/react';
+// import { CCard, CCardImage, CCardBody, CCardTitle, CCardText, CButton } from '@coreui/react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+// import Card from 'react-bootstrap/Card';
+import '../index.css'
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 
 const CourseDetails = () => {
   // State to hold the fetched course details
@@ -32,30 +37,28 @@ const CourseDetails = () => {
       <div className='background-courses'>
         <div className='container'>
           <h1 className='header-course'>Course Details</h1>
-          <Card className='card'>
+          <div className="line"></div>
+          <Card className='card' style={{border:'none'}}>
       <Card.Body>
-          <div className='row'>
-            
-           
-              <div className='col-md-4'>
-                <CCard style={{ width: '18rem' }}>
-                  <CCardImage orientation="top" src="https://res.cloudinary.com/auca/image/upload/v1687376167/Rectangle_8_tagxp9.png" />
-                  <CCardBody>
-                  <h2>{courseDetails.title}</h2>
-                  {/* <Link to={`/course/${course.id}`}>{course.title}</Link> */}
-                    <CCardText>
-                    <p>Description: {courseDetails.description}</p>
-                      {/* <p>{course.description}</p> */}
-                    </CCardText>
-                    {/* <CButton href={`#`}>Go somewhere</CButton> */}
-                    {/* <p className='p-color'>Enrolled</p> */}
-                    <Link to="/all">Back to All Courses</Link>
-                  </CCardBody>
-                </CCard>
-              </div>
-           
-          </div>
+      <Row>
+        <Col>
+        <img alt="" src='https://res.cloudinary.com/auca/image/upload/v1679073154/Rectangle_1863s_ep6c0m.png'/>
+        </Col>
+        <Col>
+         <div className='single-course'>
+         <p className='single-name'>{courseDetails.course_name}</p>
+         <p className='single-title'>{courseDetails.course_title}</p>
+         <p className='single-descr'>{courseDetails.description}</p>
+             <Row>        
+      </Row>
+             
+             
+         </div>
+        </Col>
+      </Row>
+      
           </Card.Body>
+          <Link to="/enrolled" style={{textDecoration:'none', color:'#7C849C', margin:'20px', fontWeight:'bold'}}><BsFillArrowLeftCircleFill /> Back to your courses</Link>
         </Card>
         </div>
         

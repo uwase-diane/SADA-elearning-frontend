@@ -22,7 +22,7 @@ export const NavbarDashboard = () => {
           
           <Nav className= "me-auto navbar-link" >
             {/* <Nav.Link href="#adminDashboard" style={{color:'#000000', fontSize:'0.8rem'}} className="navbar-Dashboard" >Dashboard</Nav.Link> */}
-            <Nav.Link href="/adminDashboard" style={{color:'#000000',fontSize:'0.9rem'}} className="navbar-Courses" >My courses</Nav.Link>
+            <Nav.Link href="/enrolled" style={{color:'#000000',fontSize:'0.9rem'}} className="navbar-Courses" >My courses</Nav.Link>
 
             
             {/* <Nav.Link href="/levels" style={{color:'#000000', fontSize:'0.8rem'}} className="navbar-Settings" >Levels</Nav.Link>

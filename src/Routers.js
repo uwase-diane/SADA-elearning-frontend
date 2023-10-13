@@ -6,6 +6,7 @@ import CourseDetails from './HomePage/CourseDetails';
 import { PrivateRoute } from './Auth/PrivateRoute';
 import { LogInPage } from './Auth/Login';
 import { SignUpPage } from './Auth/SignUp';
+import EnrolledCourses from './HomePage/EnrolledCourses';
 
 export const Routers = () => {
 
@@ -17,6 +18,7 @@ export const Routers = () => {
              <Route  path="/all" element={<AllCourse />} />
              <Route  path="/login" element={<LogInPage />} /> 
              <Route  path="/signup" element={<SignUpPage />} /> 
+             <Route  path="/enrolled" element={<EnrolledCourses />} /> 
              <Route  path="/course/:courseId" element={<CourseDetails />} />   
             </Routes>
            </Router>

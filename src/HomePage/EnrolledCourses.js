@@ -6,8 +6,9 @@ import Card from 'react-bootstrap/Card';
 import { CCard, CCardImage, CCardBody, CCardText } from '@coreui/react';
 import Button from 'react-bootstrap/Button';
 import '../index.css';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 
-const AllCourse = () => {
+const EnrolledCourses = () => {
   // State to hold the fetched courses
   const [courses, setCourses] = useState([]);
 
@@ -34,9 +35,10 @@ const AllCourse = () => {
   return (
     <>
       <NavbarDashboard />
+
       <div className='background-courses'>
         <div className='container'>
-          <h1 className='header-course'>List of All Courses</h1>
+          <h1 className='header-course'>List of Enrolled Courses</h1>
           <div className="line"></div>
           <Card className='card' style={{border:'none'}}>
       <Card.Body>
@@ -47,27 +49,26 @@ const AllCourse = () => {
                 <CCard style={{ width: '18rem' }}>
                   <CCardImage orientation="top" src="https://res.cloudinary.com/auca/image/upload/v1687376167/Rectangle_8_tagxp9.png" />
                   <CCardBody>
-                  <Link style={{textDecoration:'none',color:'#253F75', fontWeight:'bold',fontSize:'16px',textTransform: 'uppercase'}} to={`/course/${course.id}`}>{course.course_name}</Link>
+                  <Link className="course-l" to={`/course/${course.id}`} style={{textDecoration:'none',color:'#253F75', fontWeight:'bold',fontSize:'16px',textTransform: 'uppercase'}}>{course.course_name}</Link>
                     <CCardText style={{fontSize:'13px'}}>
                       <p>{course.course_title}</p>
                     </CCardText>
-                    <Button variant="outline-secondary" href={`#`}>Enroll</Button>
-                    {/* <p className='p-color'>Enrolled</p> */}
+                    {/* <CButton href={`#`}>Enroll</CButton> */}
+                    <p className='p-color'>Enrolled</p>
                   </CCardBody>
                 </CCard>
               </div>
             ))}
           </div>
           </Card.Body>
+
+          <Link to="/all" style={{textDecoration:'none', color:'#7C849C', margin:'20px', fontWeight:'bold'}}><BsFillArrowLeftCircleFill /> Back to All Courses</Link>
         </Card>
         </div>
         
       </div>
-
-     
-
     </>
   );
 };
 
-export default AllCourse;
+export default EnrolledCourses;

@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
-// import './styles.css';
+import '../index.css';
 
 export const LogInPage = () => {
   const [token, setToken] = useToken();
@@ -26,30 +26,36 @@ export const LogInPage = () => {
     console.log('Data:', {
       email: emailValue,
       password: passwordValue,
-      token:token
+      
     });
-    console.log("token", token)
+ 
   
     try {
+      console.log('Before network request');
       const response = await axios.post('http://127.0.0.1:8000/api/login/', {
         email: emailValue,
         password: passwordValue,
       });
-  
-      console.log(response.data.access_token);
+        console.log('After network request');
+      // console.log(response.data.access_token);
+      const tokens = response.data.access_token;
+
+      console.log('Token---->:', tokens);
       localStorage.setItem('cc_token', response.data.access_token);
       localStorage.setItem('role', response.data.role);
       console.log(response.data.role);
-  
+      localStorage.getItem('cc_token')
+      
+      // let newToken;
       const { token } = response.data;
-      setToken(token);
+      setToken(response.data.access_token);
       
   
       // Unconditionally navigate to the AllCourses page
       navigate('/all');
     } catch (error) {
       // Handle login error here
-      console.error('Login error:', error);
+      console.error('Error in axios.post:', error);
       // Set an error message to display to the user
       // You can use state to display this message in your component
       // For example: setError('Login failed. Please try again.');
@@ -63,14 +69,14 @@ export const LogInPage = () => {
         <Col>
           <img
             alt=""
-            src="https://res.cloudinary.com/auca/image/upload/v1677542336/Group_2409_e6yffx.png"
+            src="https://res.cloudinary.com/auca/image/upload/v1696956577/3seWAoOH_400x400_asydc4.jpg"
             style={{ width: '30rem' }}
           />
         </Col>
         <Col>
           <h1 className="login">Login</h1>
           <div className="form">
-            <p>Welcome to the ERP e-learning platform!</p>
+            <p>Welcome to the SADA e-learning platform!</p>
 
             <Form>
               {errorMessage && <div className="fail">{errorMessage}</div>}
@@ -105,9 +111,10 @@ export const LogInPage = () => {
               <Button
                 disabled={!emailValue || !passwordValue}
                 onClick={onLogInClicked}
-                variant="success"
+                // variant="success"
                 type="submit"
                 className="btn"
+                style={{backgroundColor:'#253F75'}}
               >
                 Login
               </Button>
@@ -115,9 +122,7 @@ export const LogInPage = () => {
                 <p>Don’t have an account? <a href="/signUp">Register here</a></p>
               </div>
 
-              <div className="footer-login">
-                Agahozo Shalom Youth Village | All rights reserved
-              </div>
+        
             </Form>
           </div>
         </Col>

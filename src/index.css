@@ -29,13 +29,15 @@ code {
 
 .p-color
 {
-  color: #E39055;
+  color: #02681b;
+  font-weight: bold;
 }
 
 .card
 {
   margin-top: 70px;
   /* border:'1px solid #ffff' */
+
 }
 
 
@@ -48,3 +50,186 @@ code {
 .flex-container .card {
   margin-right: 10px; /* Adjust the margin value as needed */
 }
+
+/* LOGIN AND SIGNUP */
+
+
+
+
+.login
+{
+    color: #000000;
+    float: left;
+    padding-top: 80px;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: bold;
+    color: #253F75;
+}
+
+.form
+{
+    padding-top: 140px;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form p
+{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.form ::placeholder
+{
+    font-size: 0.7rem;
+}
+
+.form .btn
+{
+    width: 100%;
+    background-color:#253F75;
+    font-size: 0.8rem;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border: #253F75;
+    margin-top: 20px;
+    
+}
+
+.form .btn:hover
+{
+    background-color: #253F75;
+
+}
+
+.register-link a
+{
+    color: #253F75;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.register-link a:hover
+{
+    color: #253F75;
+}
+
+.register-link p
+{
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.register-link
+{
+    
+   text-align: center;
+    padding-top: 20px;
+}
+
+
+.forgot-password a
+{
+    color: #253F75;
+    float: right;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.forgot-password a:hover{
+    color: #253F75;
+}
+.footer-login
+{
+    text-align: center;
+    padding-top: 120px;
+    font-size: 0.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-signUp
+{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 0.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+.a-link
+{
+    color: #253F75;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.a-link:hover
+{
+    color: #253F75;
+}
+.btn:hover
+{
+    background-color: #253F75;
+}
+.form .inputName
+{
+    background-color:#F1F1F1;
+    width: 100%;
+    border: #F1F1F1;
+   
+}
+
+.form-course
+{
+    background-color:#F1F1F1;
+    border: 1px solid #9C9C9C;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.course-l
+{
+  text-decoration: none;
+  color:'#253F75'
+}
+
+.single-name
+{
+    font-size: 0.8rem;
+    color: #E39055;
+    font-weight: bold;
+    line-height: 0.7;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+
+.single-title
+{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.single-descr
+{
+    font-size: 0.9rem;
+    
+}
+
+.single-author
+{
+    font-size: 0.7rem;
+    
+}
+
+.single-sessions
+{
+    font-size: 0.7rem;
+    
+}
+
+.line {
+    border: 2px solid #99AECB;
+    width: 12%;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto; /* Center horizontally */
+    display: block; /* Make it a block-level element */
+  }

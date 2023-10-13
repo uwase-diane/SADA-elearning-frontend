@@ -18,8 +18,8 @@ export const SignUpPage = () => {
   const [passwordValue, setPasswordValue] = useState('');
   const [firstNameValue, setFirstNameValue] = useState('');
   const [lastNameValue, setLastNameValue] = useState('');
-  const [genderValue, setGenderValue] = useState('');
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
+  // const [genderValue, setGenderValue] = useState('');
+  // const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
 
   // Use useNavigate instead of useHistory
   const navigate = useNavigate();
@@ -32,8 +32,7 @@ export const SignUpPage = () => {
       password: passwordValue,
       lastName: lastNameValue,
       firstName: firstNameValue,
-      gender: genderValue,
-      password2: confirmPasswordValue,
+      // password: confirmPasswordValue,
     });
 
     try {
@@ -42,8 +41,8 @@ export const SignUpPage = () => {
         password: passwordValue,
         lastName: lastNameValue,
         firstName: firstNameValue,
-        gender: genderValue,
-        password2: confirmPasswordValue,
+      
+        // password: confirmPasswordValue,
       });
 
       console.log('Response:', response.data);
@@ -65,7 +64,7 @@ export const SignUpPage = () => {
         <Col>
           <h1 className="login">Register</h1>
           <div className="form">
-            <p>Welcome to the ERP e-learning platform!</p>
+            <p>Welcome to the SADA e-learning platform!</p>
             <Form>
               {errorMessage && <div className="fail">{errorMessage}</div>}
 
@@ -88,19 +87,7 @@ export const SignUpPage = () => {
                   placeholder="Add last name"
                 />
               </Form.Group>
-              <Form.Group className="mb-1" controlId="formBasicEmail">
-                <Form.Label>Gender</Form.Label>
-                <Form.Select
-                  value={genderValue}
-                  onChange={(e) => setGenderValue(e.target.value)}
-                  className="selects"
-                  aria-label="Default select example"
-                >
-                  <option>...</option>
-                  <option value="Female">Female</option>
-                  <option value="Male">Male</option>
-                </Form.Select>
-              </Form.Group>
+              
               <Form.Group className="mb-1" controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
                 <Form.Control
@@ -121,52 +108,41 @@ export const SignUpPage = () => {
                   placeholder="At least 8 characters"
                 />
               </Form.Group>
-              <Form.Group className="mb-1" controlId="formBasicPassword">
-                <Form.Label>Confirm password</Form.Label>
-                <Form.Control
-                  className="inputName"
-                  value={confirmPasswordValue}
-                  onChange={(e) => setConfirmPasswordValue(e.target.value)}
-                  type="password"
-                  placeholder="Passwords have to match"
-                />
-              </Form.Group>
-              <Form.Group className="mb-1" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="I agree to the " />
-                <a href="/" className="a-link">
-                  Terms and conditions
-                </a>
-              </Form.Group>
 
-              <Button
+              {/* <Button
                 disabled={
                   !emailValue ||
                   !passwordValue ||
                   passwordValue !== confirmPasswordValue
                 }
                 onClick={onSignUpClicked}
-                variant="success"
+                // variant="success"
                 type="submit"
                 className="btn"
+                style={{backgroundColor:'#253F75'}}
               >
                 Signup
-              </Button>
+              </Button> */}
+              <Button 
+      disabled={!emailValue || !passwordValue}
+      onClick={onSignUpClicked}
+      variant="success" type="submit" className="btn">
+       Signup
+      </Button>
               <div className="register-link">
                 <p>
                   Already have an account? <a href="/login"> Login here</a>
                 </p>
               </div>
 
-              <div className="footer-signUp">
-                Agahozo Shalom Youth Village | All rights reserved
-              </div>
+          
             </Form>
           </div>
         </Col>
         <Col>
           <img
             alt=""
-            src="https://res.cloudinary.com/auca/image/upload/v1677542336/Group_2409_e6yffx.png"
+            src="https://res.cloudinary.com/auca/image/upload/v1696956577/3seWAoOH_400x400_asydc4.jpg"
             style={{ width: '33rem' }}
           />
         </Col>
